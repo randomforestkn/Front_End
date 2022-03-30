@@ -1,0 +1,7 @@
+html{
+  background-color: black;
+}
+
+canvas{
+  z-index: 2;
+}
