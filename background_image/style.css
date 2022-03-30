@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Bad Script', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.btn {
+  font-family: inherit;
+  background-color: #b30000;
+  box-shadow: 0 0 10px #b30000,
+               0 0 20px #b30000,
+               0 0 40px #b30000,
+               0 0 80px #b30000,
+               0 0 120px #b30000;
+  border: 0;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  cursor: pointer;
+  position: fixed;
+  top: 50px;
+  letter-spacing: 3px;
+  z-index: 100;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 500px;
+  width: 500px;
+  position: relative;
+  transition: 0.4s ease;
+}
+
+.boxes.big {
+  width: 600px;
+  height: 600px;
+}
+
+.boxes.big .box {
+  transform: rotateZ(360deg);
+}
+
+.box {
+  background-image: url('https://media.giphy.com/media/gNke2UrUTopOg/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  position: relative;
+  height: 125px;
+  width: 125px;
+  transition: 0.4s ease;
+}
+
+.box::after {
+  content: '';
+  background-color: #ff4d4d;
+  position: absolute;
+  top: 8px;
+  right: -15px;
+  height: 100%;
+  width: 15px;
+  transform: skewY(45deg);
+}
+
+.box::before {
+  content: '';
+  background-color: #b30000;
+  position: absolute;
+  bottom: -15px;
+  left: 8px;
+  height: 15px;
+  width: 100%;
+  transform: skewX(45deg);
+}
