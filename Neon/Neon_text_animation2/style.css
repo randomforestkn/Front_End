@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+
+  font-family: "Balsamiq Sans", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h2 {
+  display: flex;
+  color: transparent;
+  font-size: 10vw;
+}
+
+h2 span {
+  animation: animate 4s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+  0% {
+    color: white;
+    filter: blur(2px) hue-rotate(0deg);
+    text-shadow: 0 0 10px hsl(317 100% 54%),
+                 0 0 20px hsl(317 100% 54%),
+                 0 0 40px hsl(317 100% 54%),
+                 0 0 80px hsl(317 100% 54%),
+                 0 0 120px hsl(317 100% 54%),
+                 0 0 200px hsl(317 100% 54%),
+                 0 0 300px hsl(317 100% 54%),
+                 0 0 400px hsl(317 100% 54%);
+  }
+
+  /* 30%,70% {
+    color: white;
+    filter: blur(2px) hue-rotate(360deg);
+    text-shadow: 0 0 10px hsl(317 100% 54%),
+                 0 0 20px hsl(317 100% 54%),
+                 0 0 40px hsl(317 100% 54%),
+                 0 0 80px hsl(317 100% 54%),
+                 0 0 120px hsl(317 100% 54%),
+                 0 0 200px hsl(317 100% 54%);
+  } */
+
+  100% {
+    color: transparent;
+    box-shadow: none;
+    filter: blur(2px) hue-rotate(0deg);
+}
+}
