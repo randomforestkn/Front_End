@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Iceland&family=Monoton&family=Montserrat&family=Neonderthaw&family=Pacifico&family=Press+Start+2P&family=Roboto&display=swap');
+
+html, body, canvas {
+  height: 100%;
+}
+
+html {
+  overflow: hidden;
+  background: #020202;
+}
+
+body {
+  margin: 0;
+}
+
+canvas {
+	position: absolute;
+	width: 100%;
+}
